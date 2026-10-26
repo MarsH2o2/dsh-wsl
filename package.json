@@ -1,0 +1,19 @@
+{
+  "name": "dsh-wsl",
+  "version": "0.1.0",
+  "description": "WSL workspaces for DeepSeek Harness on Windows: folder picker, file I/O and shell routing for \\\\wsl.localhost paths",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "wsl.patch.yml"
+  ],
+  "license": "MIT",
+  "os": [
+    "win32"
+  ]
+}

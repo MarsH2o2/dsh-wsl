@@ -1,0 +1,20 @@
+# dsh-wsl: rows to merge into ~/.dsh/profiles/desktop/cordis.patch.yml
+# (a top-level YAML array; keep your existing rows).
+#
+# 1. Disable the adaptive picker (it mounts the native OS dialog on Windows)
+#    and mount the in-app browse picker instead; dsh-wsl extends it with a
+#    WSL view.
+# 2. Load the plugin itself.
+#
+# To undo: delete these rows.
+
+- id: directory-picker
+  disabled: true
+
+- insert:
+    - id: directory-picker-browse
+      name: '@deepseek-ai/dsh-host-directory-picker-browse'
+    - id: directory-picker-browse-ui
+      name: '@deepseek-ai/dsh-client-ui-directory-picker-browse'
+    - id: dsh-wsl
+      name: file:///C:/Users/qiang-yang/Documents/deepseek-harness/dsh-wsl/lib/index.js
